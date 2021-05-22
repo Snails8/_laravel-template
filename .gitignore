@@ -15,5 +15,9 @@ yarn-error.log
 # docker
 .docker/db/data
 
+# BuildFiles
+public/css
+public/js
+
 # IDE
 .idea
