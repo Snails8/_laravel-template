@@ -21,7 +21,7 @@ class UsersTableSeeder extends Seeder
                 'name'  => 'たにし',
                 'kana'  => 'タニシ',
                 'email' => 'sample@gmail.com',
-                'email_verified' => Carbon::now(),
+                'email_verified_at' => Carbon::now(),
                 'password' => bcrypt('password'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
