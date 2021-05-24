@@ -20,7 +20,7 @@ class CreateCustomersTable extends Migration
             $table->string('tel');
             $table->string('email')->unique();
             $table->string('password');
-
+            $table->rememberToken();
             $table->timestamps();
         });
     }
