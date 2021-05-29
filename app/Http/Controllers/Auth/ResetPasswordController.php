@@ -45,6 +45,30 @@ class ResetPasswordController extends Controller
     }
 
     /**
+     * @return string[]
+     */
+    protected function rules()
+    {
+        return [
+            'token' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|confirmed|min:8',
+        ];
+    }
+
+    /**
+     * @return string[]
+     */
+    protected function validationErrorMessages()
+    {
+        return [
+            'password.min'  => 'パスワードは英数8文字以上にしてください。',
+            'password.required'  => 'パスワードは必須項目です。',
+            'password.confirmed' => '確認用パスワードと一致しません。',
+        ];
+    }
+
+    /**
      * @param Request $request
      * @param null $token
      * @return View
