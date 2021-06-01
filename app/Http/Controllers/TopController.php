@@ -9,6 +9,14 @@ class TopController extends Controller
 {
     public function index(): View
     {
-        return view('top');
+        $title = 'サンプルタイトル';
+        $description = 'サンプルディスクリプション';
+
+        $data = [
+            'title' => $title,
+            'description' => $description,
+        ];
+
+        return view('top', $data);
     }
 }
