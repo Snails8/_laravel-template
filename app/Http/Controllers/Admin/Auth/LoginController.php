@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Auth;
 
 /**
@@ -45,9 +47,28 @@ class LoginController extends Controller
     }
 
     /**
+     * logout
+     * @param Request $request
+     * @return mixed
+     */
+    public function logout(Request $request): Redirector
+    {
+        $this->guard()->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return $this->loggedOut($request) ?: $this->redirect('/admin/login');
+    }
+
+    /**
+     * Authに入る前にguardの上書き(管理画面用のguard指定
+     * Get the guard to be used during authentication.
+     *
      * @return \Illuminate\Contracts\Auth\Guard|\Illuminate\Contracts\Auth\StatefulGuard
      */
-    public function guard()
+    protected function guard()
     {
         return Auth::guard('admin');
     }
