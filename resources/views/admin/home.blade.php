@@ -1,4 +1,4 @@
-@extends('resources.views._layouts.app')
+@extends('admin._layouts.app')
 
 @section('content')
 <div class="container">

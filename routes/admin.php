@@ -9,5 +9,5 @@ Route::post('login', [LoginController::class, 'login']);
 Route::post('logout',[LoginController::class, 'logout'])->name('logout');
 
 Route::middleware('auth:admin')->group(function() {
-    Route::get('/home', [SampleController::class, 'home']);
+    Route::get('/home', [SampleController::class, 'index']);
 });
