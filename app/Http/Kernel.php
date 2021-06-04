@@ -4,9 +4,15 @@ namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
+/**
+ * middlewareの設定
+ * Class Kernel
+ * @package App\Http
+ */
 class Kernel extends HttpKernel
 {
     /**
+     * すべてのルートで起動
      * The application's global HTTP middleware stack.
      *
      * These middleware are run during every request to your application.
@@ -50,6 +56,8 @@ class Kernel extends HttpKernel
     ];
 
     /**
+     * $this->middlewareのように任意で起動
+     *
      * The application's route middleware.
      *
      * These middleware may be assigned to groups or used individually.
