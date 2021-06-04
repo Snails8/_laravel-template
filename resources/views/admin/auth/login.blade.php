@@ -1,4 +1,4 @@
-@include('admin.auth._layouts.layout')
+@extends('admin.auth._layouts.layout')
 @section('title', 'ログイン')
 @section('content')
   <div class="container">
