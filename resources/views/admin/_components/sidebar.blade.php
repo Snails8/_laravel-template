@@ -14,7 +14,7 @@
 {{--              <div class="peer peer-greed">--}}
 {{--                <h5 class="lh-1 mB-0 logo-text text-white">{{ env('APP_NAME', 'Laravel')}}</h5>--}}
 {{--              </div>--}}
-              
+
             </div>
           </a>
         </div>
