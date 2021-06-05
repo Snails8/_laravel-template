@@ -23,6 +23,7 @@
 <body>
 <div id="app">
     @include('admin._components.nav')
+    @include('admin._components.sidebar')
     <main class="py-4">
         @yield('content')
     </main>
