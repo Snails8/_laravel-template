@@ -10,6 +10,27 @@ class SampleController extends Controller
 {
     public function index(): View
     {
-        return view('admin.home');
+        $title = '';
+        $description = '';
+
+        $data = [
+            'title' => $title,
+            'description' => $description,
+        ];
+
+        return view('admin.home', $data);
+    }
+
+    public function showHoge(): View
+    {
+        $title = '';
+        $description = '';
+
+        $data = [
+            'title' => $title,
+            'description' => $description,
+        ];
+
+//        return view('admin.home', $data);
     }
 }
