@@ -14,4 +14,8 @@ final class Reserve extends Enum
     const OptionOne =   0;
     const OptionTwo =   1;
     const OptionThree = 2;
+
+    const RESERVE_TIMES = [
+
+    ];
 }
