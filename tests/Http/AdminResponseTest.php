@@ -2,6 +2,7 @@
 
 namespace tests\Http;
 
+use App\Models\User;
 use Tests\TestCase;
 
 class FrontResponseTest extends TestCase
@@ -11,7 +12,9 @@ class FrontResponseTest extends TestCase
      */
     public function adminトップページのレスポンスは正常である()
     {
-        $this->get('/admin/home')->assertStatus(200);
+        $user = User::factory()->create();
+
+        $this->actingAs($user, 'admin')->get(route('dashboard'))->assertStatus(200);
     }
 
     /**
