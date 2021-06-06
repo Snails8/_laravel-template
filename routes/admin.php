@@ -10,7 +10,7 @@ Route::post('login', [LoginController::class, 'login']);
 Route::post('logout',[LoginController::class, 'logout'])->name('logout');
 
 Route::middleware('auth:admin')->group(function() {
-    Route::get('/home', [SampleController::class, 'index']);
+    Route::get('/home', [SampleController::class, 'index'])->name('dashboard');
 
     Route::resource('crud', SampleCrudController::class)->except([
         'show'
