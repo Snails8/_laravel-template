@@ -9,8 +9,16 @@ class FrontResponseTest extends TestCase
     /**
      * @test
      */
-//    public function トップページのレスポンスは正常である()
-//    {
-//        $this->get('/')->assertStatus(200);
-//    }
+    public function adminトップページのレスポンスは正常である()
+    {
+        $this->get('/admin/home')->assertStatus(200);
+    }
+
+    /**
+     * @test
+     */
+    public function loginページのレスポンスは正常である()
+    {
+        $this->get('/admin/login')->assertStatus(200);
+    }
 }
