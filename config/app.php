@@ -166,9 +166,12 @@ return [
          * Package Service Providers...
          */
 
-        /*
+        /*以下に登録するとServiceProviderをServiceContainerに登録できる
+         *
          * Application Service Providers...
          */
+
+        // default
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
